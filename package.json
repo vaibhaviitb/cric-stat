@@ -2,7 +2,6 @@
   "name": "cric-stat",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://cric-stat-server.herokuapp.com",
   "dependencies": {
     "@babel/core": "7.8.4",
     "@svgr/webpack": "4.3.3",
