@@ -6,6 +6,7 @@ import {SelectMessage} from './InnerComponents';
 import {tabulizeCompare} from './utils';
 import {CompareTable} from './containers/CompareTables'
 import axios from 'axios';
+import {stats} from './data'
 
 class App extends React.Component {
   constructor(props) {
@@ -19,7 +20,8 @@ class App extends React.Component {
     };
   }
   componentDidMount(){
-    axios.get('/players').then(data=>this.setState({myData: data.data})).catch(e=>alert(e));
+    // axios.get('/players').then(data=>this.setState({myData: data.data})).catch(e=>alert(e));
+    this.setState({myData: stats})
   }
   handleCompareSelect=()=>this.setState({renderCompare: true});
   toggleCompare =()=>{
